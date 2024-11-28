@@ -9,8 +9,8 @@ struct _Profile
 {
     char full_name[FULL_NAME_SIZE + 1];
     char citizen_id[CITIZEN_ID_SIZE + 1];
-    char emails[EMAIL_SIZE + 1];
-    char addresses[ADDRESS_SIZE + 1];
+    char email[EMAIL_SIZE + 1];
+    char address[ADDRESS_SIZE + 1];
     Sex sex;
     Date dob;
 };
