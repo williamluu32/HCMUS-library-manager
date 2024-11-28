@@ -22,20 +22,10 @@ static int is_valid_year(int year)
  */
 static int is_leap(int year)
 {
-    if (year % 4 == 0)
-        return TRUE;
-    else
-    {
-        if (year % 100 == 0)
-        {
-            if (year % 400 == 0)
-                return TRUE;
-            else
-                return FALSE;
-        }
-        else
-            return FALSE;
-    }
+    if (!is_valid_year(year))
+        return FALSE;
+
+    return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
 }
 
 static int get_days_of_month(const Date *d)
