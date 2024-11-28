@@ -1,0 +1,7 @@
+PATRON (Độc giả)
+- 1a. xem thông tin độc giả
+- 1b. thêm độc giả
+- 1c. chỉnh sửa thông tin độc giả
+- 1d. xóa độc giả
+- 1e. tìm kiếm độc giả theo cmnd
+- 1f. tìm kiểm sách theo họ tên của độc giả

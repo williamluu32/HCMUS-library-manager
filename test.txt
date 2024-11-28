@@ -1,0 +1,6 @@
+InputChoice() (menu.c)
+1. FAIL
+- chon 1 vai option 5, 6, 7 -> ok
+- chon chữ không phải là số -> loop 
+2. FAIL 
+- mới vào user sẽ bấm chữ bất kỳ -> đồng nghĩa với option 0

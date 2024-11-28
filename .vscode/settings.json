@@ -3,6 +3,17 @@
   "files.associations": {
     "stdio.h": "c",
     "time.h": "c",
-    "patron.h": "c"
+    "patron.h": "c",
+    "stdlib.h": "c",
+    "format.h": "c",
+    "format.H": "cpp",
+    "my_string.h": "c",
+    "string.h": "c",
+    "borrowing_slip.h": "c",
+    "book.h": "c",
+    "date.h": "c",
+    "email.h": "c",
+    "abc.h": "c",
+    "xmemory": "c"
   }
 }

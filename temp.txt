@@ -1,0 +1,8 @@
+gcc main.c patron/patron.c menu/menu.c util/my_string.c util/console.c util/date/date.c util/email/email.c book/book.c borrowing/borrowing.c -o output
+
+Run: ./output
+
+
+---------------
+[patron.c]
+- input_sex: chưa viết TH lỗi -> chưa optimize
