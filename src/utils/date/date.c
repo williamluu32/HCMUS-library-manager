@@ -2,12 +2,12 @@
 #include "../../../include/constants/system_const.h"
 #include "../../../include/constants/time_const.h"
 
-/////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
 /**
  * Xác định xem năm đã cho có phải hợp lệ hay không
  *
  * @param year năm
- * @return trả về 1 nếu đó là năm hợp lệ, ngược lại trả về 0
+ * @return 1 nếu đó là năm hợp lệ, ngược lại trả về 0
  */
 static int is_valid_year(int year)
 {
@@ -15,10 +15,21 @@ static int is_valid_year(int year)
 }
 
 /**
+ * Xác định xem tháng đã cho có phải hợp lệ hay không
+ *
+ * @param month tháng
+ * @return 1 nếu đó là tháng hợp lệ, ngược lại trả về 0
+ */
+static int is_valid_month(int month)
+{
+    return month >= MIN_MONTH && month <= MAX_MONTH;
+}
+
+/**
  * Xác định xem năm đã cho có phải năm nhuận không
  *
  * @param year năm
- * @return trả về 1 nếu đó là năm nhuận, ngược lại trả về 0
+ * @return 1 nếu đó là năm nhuận, ngược lại trả về 0
  */
 static int is_leap(int year)
 {
@@ -28,9 +39,19 @@ static int is_leap(int year)
     return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
 }
 
-static int get_days_of_month(const Date *d)
+/**
+ * Xác định số ngày của tháng-năm đã cho
+ *
+ * @param month tháng
+ * @param year năm
+ * @return số ngày của tháng, hoặc -1 nếu tháng hoặc năm không hợp lệ
+ */
+static int get_days_of_month(int month, int year)
 {
-    switch (d->month)
+    if (!is_valid_month(month) || !is_valid_year(year))
+        return INVALID;
+
+    switch (month)
     {
     case 1:
     case 3:
@@ -46,15 +67,20 @@ static int get_days_of_month(const Date *d)
     case 11:
         return 30;
     case 2:
-        return is_leap(d->month) ? 29 : 28;
+    {
+        return is_leap(year) ? 29 : 28;
+    }
     }
 }
 
 /////////////////////////////////////////////////////////
 int is_valid_date(const Date *d)
 {
-    // valid year
-    // valid month
-    // valid date by dateofmonth
-    return 0;
+    if (!is_valid_month(d->month) || !is_valid_year(d->year))
+        return FALSE;
+
+    if (d->day < MIN_DAY || d->day > get_days_of_month(d->month, d->year))
+        return FALSE;
+
+    return TRUE;
 }
