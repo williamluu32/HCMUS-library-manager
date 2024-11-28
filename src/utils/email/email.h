@@ -2,10 +2,10 @@
 #define EMAIL_H
 
 /**
- * Kiểm tra cơ bản có phải là một email hợp lệ hay không
+ * Xác định xem có phải là email hợp lệ không
  *
  * @param email địa chỉ email cần kiểm tra
- * @return 1 nếu địa chỉ email hợp lệ, 0 thì ngược lại
+ * @return 1 nếu địa chỉ email hợp lệ, ngược lại trả về 0
  */
 int is_valid_email(const char *email);
 
