@@ -1,0 +1,9 @@
+#ifndef PROFILE_CONST_H
+#define PROFILE_CONST_H
+
+#define FULL_NAME_SIZE 50
+#define CITIZEN_ID_SIZE 12
+#define EMAIL_SIZE 320
+#define ADDRESS_SIZE 100
+
+#endif // PROFILE_CONST_H
