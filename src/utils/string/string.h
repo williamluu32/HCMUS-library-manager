@@ -1,0 +1,12 @@
+#ifndef STR_H
+#define STR_H
+
+/**
+ * Xóa ký tự xuống dòng ('\n') ở cuối chuỗi ký tự.
+ *
+ * @param str chuỗi cần xử lý
+ * @example xóa ký tự xuống dòng được tự động thêm vào cuối chuỗi sau khi đọc một dòng từ bàn phím bằng hàm fgets()
+ */
+void remove_trailing_newline(char *str);
+
+#endif // STR_H
