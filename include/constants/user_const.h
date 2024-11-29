@@ -1,0 +1,9 @@
+#ifndef USER_CONST_H
+#define USER_CONST_H
+
+#define MIN_USERNAME_SIZE 6
+#define MAX_USERNAME_SIZE 30
+#define MIN_PASSWORD_SIZE 6
+#define MAX_PASSWORD_SIZE 20
+
+#endif // USER_CONST_H
