@@ -5,6 +5,7 @@
 #include "../../include/enumerations/sex.h"
 #include "../utils/date/date.h"
 
+#pragma pack(1)
 struct _Profile
 {
     char full_name[FULL_NAME_SIZE + 1];
@@ -14,6 +15,7 @@ struct _Profile
     Sex sex;
     Date dob;
 };
+#pragma pack(1)
 
 typedef struct _Profile Profile;
 
