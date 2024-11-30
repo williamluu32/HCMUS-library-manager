@@ -9,9 +9,9 @@
 #pragma pack(1)
 struct _User
 {
+    int id; // tự tăng
     char user_name[MAX_USERNAME_SIZE + 1];
     char password[MAX_PASSWORD_SIZE + 1];
-    int id;
     UserStatus status;
     UserType type;
     Profile profile;
